@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Bai Tap JS Buoi 2-3</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container" style="margin-bottom: 500px; margin-top: 50px;">
+        <!--Bai Tap 1: Tinh tieng luong  -->
+        <div class="card w-50 bg-info text-white">
+            <div class="card-header font-weight-bold">
+                <h1>Bài 1: Tính tiền lương nhân viên</h1>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <h3>Số ngày làm</h3>
+                    <select class="form-control" id="soNgayLam">
+                        <option value="25">25 ngày</option>
+                        <option value="26">26 ngày</option>
+                        <option value="27">27 ngày</option>
+                        <option value="28">28 ngày</option>
+                        <option value="29">29 ngày</option>
+                        <option value="30">30 ngày</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <h3>Lương một ngày</h3>
+                    <select class="form-control" id="luongMotNgay">
+                        <option value="50000">50000VND</option>
+                        <option value="100000">100000VND</option>
+                        <option value="150000">150000VND</option>
+                        <option value="200000">200000VND</option>
+                    </select>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-danger" id="btnTinhLuong">Tính tiền lương</button>
+                <div class="alert alert-warning mt-20">
+                    <h3 id="tienLuong"></h3>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!-- Bai Tap 2: Tinh gia tri trung binh -->
+        <div class="card w-50 bg-secondary text-white">
+            <div class="card-header">
+                <h1>Bài 2: Tính giá trị trung bình</h1>
+            </div>
+            <div class="card-body">
+                <h3>Nhập vào 5 số thực</h3>
+                <div class="row">
+                    <div class="col-md-4 form-group">
+                        <p>Số thứ nhất</p>
+                        <input class="form-control" id="soThuNhat" placeholder="Nhập số" />
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <p>Số thứ hai</p>
+                        <input class="form-control" id="soThuHai" placeholder="Nhập số" />
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <p>Số thứ ba</p>
+                        <input class="form-control" id="soThuBa" placeholder="Nhập số" />
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <p>Số thứ tư</p>
+                        <input class="form-control" id="soThuTu" placeholder="Nhập số" />
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <p>Số thứ năm</p>
+                        <input class="form-control" id="soThuNam" placeholder="Nhập số" />
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-danger" id="btnTinhTrungBinh">Tính trung bình</button>
+                <div class="alert alert-warning">
+                    <h3 id="trungBinh"></h3>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!-- Bai Tap 3: Quy doi tien -->
+        <div class="card w-50 bg-light">
+            <div class="card-header">
+                <h1>Bài 3: Quy đổi tiền USD sang VND</h1>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <h3>Nhâp số tiền USD</h3>
+                    <input class="form-control" id="soTienUSD" placeholder="Hãy nhập số tiền" />
+                </div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-danger" id="btnDoiTien">Đổi tiền</button>
+                <div class="alert alert-secondary" id="tienVND"></div>
+            </div>
+        </div>
+        <hr />
+        <!-- Bai Tap 4: Tinh chu vi, dien tich hcn -->
+        <div class="card w-50 bg-success text-white">
+            <div class="card-header">
+                <h1>Bài 4: Tính chu vi, diện tích HCN</h1>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <h3>Chiều dài</h3>
+                    <input class="form-control" id="chieuDai" placeholder="Hãy nhập độ dài chiều dài" />
+                </div>
+                <div class="form-group">
+                    <h3>Chiều rộng</h3>
+                    <input class="form-control" id="chieuRong" placeholder="Hãy nhập độ dài chiều rộng" />
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button class="btn btn-dark btn-lg" id="btnTinhChuVi">Tính chu vi</button>
+                        <div class="alert alert-light" id="chuVi"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-dark btn-lg" id="btnTinhDienTich">Tính diện tích</button>
+                        <div class="alert alert-light" id="dienTich"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!-- Bai Tap 5: Tinh tong hai ky so -->
+        <div class="card w-50 bg-dark text-white">
+            <div class="card-header">
+                <h1>Bài 5: Tính tổng hai ký số</h1>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <h3>Số có hai chữ số</h3>
+                    <input class="form-control" id="soHaiChuSo" placeholder="Hãy nhập số có hai chữ số" />
+                </div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-danger btn-lg" id="btnTinhTongKySo">Tính tổng</button>
+                <div class="alert alert-warning" id="tongHaiKySo"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
